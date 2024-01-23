@@ -26,6 +26,7 @@ export default function Login() {
             id = "email"
             type="text"
             value={user.email}
+            // ...user will keep everything same and only the email will be changed in user variable using setUser.
             onChange={e => setUser({...user, email:e.target.value})}
             placeholder="Email address"
         />
@@ -34,12 +35,13 @@ export default function Login() {
             id = "password"
             type="password"
             value={user.password}
+            // ...user will keep everything same and only the password will be changed in user variable using setUser.
             onChange={e => setUser({...user, password:e.target.value})}
             placeholder="Password"
         />
         <button 
             onClick={onLogin} 
-            className="text-xl p-2 px-[120px] border border-blue-300 rounded-md mb-4 focus:outline-none focus:border-blue-700 text-white bg-blue-600 hover:bg-blue-500"
+            className="text-xl p-2 px-10 border border-blue-300 rounded-md mb-4 focus:outline-none focus:border-blue-700 text-white bg-blue-600 hover:bg-blue-500"
         >
             Log in
         </button>
